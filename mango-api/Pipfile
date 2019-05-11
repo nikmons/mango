@@ -11,6 +11,7 @@ python-dotenv = "*"
 flask = "*"
 flask-restful = "*"
 codecov = "*"
+gunicorn = "*"
 
 [requires]
 python_version = "3.6"
