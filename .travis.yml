@@ -4,10 +4,11 @@ python:
 install:
   - "pip install pipenv"
   - "pipenv install"
+  - "pipenv install codecov"
 before_script:
 - cd mango-api
-# script:
-# - python -m unittest discover
+script:
+- python -m unittest discover
 deploy:
   matrix:
   - provider: heroku
