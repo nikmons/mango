@@ -10,6 +10,7 @@ python-dotenv = "*"
 [packages]
 flask = "*"
 flask-restful = "*"
+codecov = "*"
 
 [requires]
 python_version = "3.6"

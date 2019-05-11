@@ -4,7 +4,6 @@ python:
 install:
 - pip install pipenv
 - pipenv install
-- pipenv install codecov
 before_script:
 - cd mango-api
 script:
