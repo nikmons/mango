@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:mango_flutter_app/home_page.dart';
+import 'package:mango_flutter_app/ui/home_page.dart';
+import 'package:mango_flutter_app/ui/register_page.dart';
 
 class LoginPage extends StatefulWidget {
   static String tag = 'login-page';
@@ -48,11 +49,26 @@ class _LoginPageState extends State<LoginPage> {
           borderRadius: BorderRadius.circular(24),
         ),
         onPressed: () {
-          Navigator.of(context).pushNamed(HomePage.tag);
+          Navigator.of(context).pushReplacementNamed(HomePage.tag);
         },
         padding: EdgeInsets.all(12),
         color: Colors.lightBlueAccent,
         child: Text('Log In', style: TextStyle(color: Colors.white)),
+      ),
+    );
+
+    final registerButton = Padding(
+      padding: EdgeInsets.symmetric(vertical: 8.0),
+      child: RaisedButton(
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(24),
+        ),
+        onPressed: () {
+          //Navigator.of(context).pushNamed(RegisterPage.tag);
+        },
+        padding: EdgeInsets.all(12),
+        color: Colors.lightBlue[50],
+        child: Text('Register', style: TextStyle(color: Colors.lightBlue)),
       ),
     );
 
@@ -76,8 +92,10 @@ class _LoginPageState extends State<LoginPage> {
             email,
             SizedBox(height: 8.0),
             password,
-            SizedBox(height: 24.0),
+            SizedBox(height: 12.0),
             loginButton,
+            SizedBox(height: 2.0),
+            registerButton,
             forgotLabel
           ],
         ),

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-import 'login_page.dart';
-import 'home_page.dart';
+import 'package:mango_flutter_app/ui/login_page.dart';
+import 'package:mango_flutter_app/ui/home_page.dart';
+import 'package:mango_flutter_app/ui/register_page.dart';
+import 'package:mango_flutter_app/ui/splash_page.dart';
 
 void main() => runApp(MyApp());
 
@@ -8,6 +10,8 @@ class MyApp extends StatelessWidget {
   final routes = <String, WidgetBuilder>{
     LoginPage.tag: (context) => LoginPage(),
     HomePage.tag: (context) => HomePage(),
+    RegisterPage.tag: (context) => RegisterPage(),
+    SplashPage.tag: (context) => SplashPage()
   };
 
   @override
@@ -19,7 +23,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.lightBlue,
         fontFamily: 'Nunito',
       ),
-      home: LoginPage(),
+      home: SplashPage(),
       routes: routes,
     );
   }
