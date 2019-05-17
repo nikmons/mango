@@ -19,6 +19,7 @@ flask-migrate = "*"
 psycopg2 = "*"
 flask-jwt-extended = "*"
 flasgger = "*"
+py-bcrypt = "*"
 
 [requires]
 python_version = "3.6"
