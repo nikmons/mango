@@ -12,6 +12,13 @@ flask = "*"
 flask-restful = "*"
 codecov = "*"
 gunicorn = "*"
+sqlalchemy = "*"
+flask-sqlalchemy = "*"
+flask-script = "*"
+flask-migrate = "*"
+psycopg2 = "*"
+flask-jwt-extended = "*"
+flasgger = "*"
 
 [requires]
 python_version = "3.6"
