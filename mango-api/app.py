@@ -70,9 +70,11 @@ from models import models
 
 from resources.external_register import ExternalRegister
 from resources.external_login import ExternalLogin
+from resources.countries_list import CountriesListAPI
 
 api.add_resource(ExternalRegister, '/api/external/register', endpoint='ext_register')
 api.add_resource(ExternalLogin, '/api/external/login', endpoint='ext_login')
+api.add_resource(CountriesListAPI, '/api/countries', endpoint="countries")
 
 # Setup endpoints
 
