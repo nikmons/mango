@@ -30,7 +30,7 @@ class CountriesListAPI(Resource):
     def post(self):
         args = self.reqparse.parse_args()
         print(args)
-        country = models.Devices(country_iso_code=args["COUNTRY_ISO_CODE"],
+        country = models.Countries(country_iso_code=args["COUNTRY_ISO_CODE"],
                                     country_name=args["COUNTRY_NAME"], country_state_name=args["COUNTRY_STATE_NAME"],
                                     country_phone_code=args["COUNTRY_PHONE_CODE"])
         db.session.add(country)
