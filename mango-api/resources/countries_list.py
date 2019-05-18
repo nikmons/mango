@@ -25,7 +25,7 @@ class CountriesListAPI(Resource):
         super(CountriesListAPI, self).__init__()
 
 
-    @jwt_required
+    #@jwt_required
     #@swag_from("apidocs/devices_post.yml")
     def post(self):
         args = self.reqparse.parse_args()
