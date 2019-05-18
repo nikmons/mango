@@ -41,7 +41,7 @@ class _SplashPageState extends State<SplashPage> {
                 Container(decoration: BoxDecoration(color: Colors.lightBlueAccent),
                   alignment: FractionalOffset(0.5, 0.3),
                   child:
-                  Text("TestApp", style: TextStyle(fontSize: 40.0, color: Colors.white),),
+                  Text("Mango - HR Management", style: TextStyle(fontSize: 40.0, color: Colors.white),),
                 ),
                 ),
                 Container(margin: EdgeInsets.fromLTRB(0.0, 0.0, 0.0, 30.0),

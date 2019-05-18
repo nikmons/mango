@@ -12,7 +12,7 @@ class HomePage extends StatelessWidget {
         child: CircleAvatar(
           radius: 72.0,
           backgroundColor: Colors.transparent,
-          backgroundImage: AssetImage('assets/alucard.jpg'),
+          backgroundImage: AssetImage('assets/mango.png'),
         ),
       ),
     );
@@ -20,7 +20,7 @@ class HomePage extends StatelessWidget {
     final welcome = Padding(
       padding: EdgeInsets.all(8.0),
       child: Text(
-        'Welcome Alucard',
+        'Welcome nikos',
         style: TextStyle(fontSize: 28.0, color: Colors.white),
       ),
     );
