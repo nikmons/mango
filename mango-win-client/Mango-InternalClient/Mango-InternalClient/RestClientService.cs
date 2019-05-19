@@ -11,7 +11,8 @@ namespace Mango_InternalClient
 {
     public class RestClientService : IDisposable
     {
-        public const string BASE_URL = "http://127.0.0.1:5000/api/external";
+        //public const string BASE_URL = "http://127.0.0.1:5000/api/external";
+        public const string BASE_URL = "https://mango-api-heroku.herokuapp.com/api/external";
 
         public RestClientService()
         {

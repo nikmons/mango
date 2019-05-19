@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:mango_flutter_app/ui/home_page.dart';
 import 'package:mango_flutter_app/ui/register_page.dart';
 
+import 'package:mango_flutter_app/common/apifunctions/reqLoginAPI.dart';
+
 class LoginPage extends StatefulWidget {
   static String tag = 'login-page';
   @override
@@ -9,6 +11,10 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
+
+  final _usernameController = TextEditingController();
+  final _passwordController = TextEditingController();
+  
   @override
   Widget build(BuildContext context) {
     final logo = Hero(
@@ -20,20 +26,19 @@ class _LoginPageState extends State<LoginPage> {
       ),
     );
 
-    final email = TextFormField(
-      keyboardType: TextInputType.emailAddress,
+    final username = TextFormField(
+      controller: _usernameController,
       autofocus: false,
-      initialValue: 'nikos@test.com',
       decoration: InputDecoration(
-        hintText: 'Email',
+        hintText: 'username',
         contentPadding: EdgeInsets.fromLTRB(20.0, 10.0, 20.0, 10.0),
         border: OutlineInputBorder(borderRadius: BorderRadius.circular(32.0)),
       ),
     );
 
     final password = TextFormField(
+      controller: _passwordController,
       autofocus: false,
-      initialValue: 'some password',
       obscureText: true,
       decoration: InputDecoration(
         hintText: 'Password',
@@ -49,7 +54,8 @@ class _LoginPageState extends State<LoginPage> {
           borderRadius: BorderRadius.circular(24),
         ),
         onPressed: () {
-          Navigator.of(context).pushReplacementNamed(HomePage.tag);
+          reqLoginAPI(context, _usernameController.text, _passwordController.text);
+          //Navigator.of(context).pushReplacementNamed(HomePage.tag);
         },
         padding: EdgeInsets.all(12),
         color: Colors.lightBlueAccent,
@@ -64,7 +70,7 @@ class _LoginPageState extends State<LoginPage> {
           borderRadius: BorderRadius.circular(24),
         ),
         onPressed: () {
-          //Navigator.of(context).pushNamed(RegisterPage.tag);
+          Navigator.of(context).pushNamed(RegisterPage.tag);
         },
         padding: EdgeInsets.all(12),
         color: Colors.lightBlue[50],
@@ -89,7 +95,7 @@ class _LoginPageState extends State<LoginPage> {
           children: <Widget>[
             logo,
             SizedBox(height: 48.0),
-            email,
+            username,
             SizedBox(height: 8.0),
             password,
             SizedBox(height: 12.0),
